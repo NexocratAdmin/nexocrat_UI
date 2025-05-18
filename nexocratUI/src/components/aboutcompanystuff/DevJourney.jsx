@@ -1,5 +1,5 @@
 import { JOURNEY_DATA } from "../../data/constantData";
-import checkmarkIcon from "../assets/CheckmarkCircle.png";
+import checkmarkIcon from "../../assets/CheckmarkCircle.png";
 
 const DevJourney = () => {
   return (

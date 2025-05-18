@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import NavItem from "./NavItem";
 import ThemeToggleButton from "./ThemeToggleButton";
-import GradientBg from "./animations/GradientBg";
 import MainContent from "./MainContent";
+import heroImage from "../assets/heroImage.png";
+import NexocratLogo from "../assets/NexocratLogo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,9 +16,14 @@ const Navbar = () => {
       <nav className="bg-white dark:bg-gray-900 shadow-md fixed w-full z-50 transition-colors text-black dark:text-white shadow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
-            {/* Logo */}
-            <div className="flex-shrink-0 text-xl font-bold text-blue-600 dark:text-blue-400">
-              Nexocrat
+            <div className="flex items-center flex-shrink-0 text-xl font-bold text-blue-600 dark:text-blue-400">
+              <img
+                src={NexocratLogo}
+                alt="nexocrat logo"
+                width={42}
+                height={42}
+              />
+              <span>Nexocrat</span>
             </div>
 
             {/* Desktop Menu */}
@@ -60,7 +66,9 @@ const Navbar = () => {
           </div>
         )}
       </nav>
-      <GradientBg />
+      <div className="flex align-center justify-center">
+        <img src={heroImage} alt="brand-image" />
+      </div>
       <MainContent />
     </>
   );

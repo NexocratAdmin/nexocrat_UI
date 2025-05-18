@@ -1,7 +1,7 @@
 import { PILLAR_DATA } from "../../data/constantData";
-import lockIcon from "../assets/CheckmarkCircle.png";
-import checkmarkSquareIcon from "../assets/checkmarkSquareIcon.png";
-import groupIcon from "../assets/GroupIcon.png";
+import lockIcon from "../../assets/lockIcon.png";
+import checkmarkSquareIcon from "../../assets/checkmarkSquareIcon.png";
+import groupIcon from "../../assets/GroupIcon.png";
 
 const IconMapping = {
   "lock-icon": lockIcon,
@@ -10,13 +10,13 @@ const IconMapping = {
 };
 
 const getIcon = (iconType) => {
-  return IconMapping(iconType) || IconMapping["group-icon"];
+  return IconMapping[iconType] || IconMapping["group-icon"];
 };
 
-const Pillars = () => {
+const PillarSection = () => {
   return (
-    <section className="py-16 bg-white dark:bg-gray-900">
-      <div className="text-center mb-12">
+    <section id="pillar-section" className="py-16 bg-white dark:bg-gray-900">
+      <div className="text-center mt-12 mb-12">
         <h1 className="text-3xl font-bold text-gray-800 dark:text-white">
           {PILLAR_DATA.title}
         </h1>
@@ -41,11 +41,9 @@ const Pillars = () => {
           </div>
         ))}
       </div>
-
-      {/* <!-- Optional Divider --> */}
       <div className="mt-12 border-t border-gray-200 dark:border-gray-700 w-full max-w-6xl mx-auto"></div>
     </section>
   );
 };
 
-export default Pillars;
+export default PillarSection;

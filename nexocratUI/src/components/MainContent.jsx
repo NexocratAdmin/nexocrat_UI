@@ -1,11 +1,15 @@
 import DevJourney from "./aboutcompanystuff/DevJourney";
-import Pillars from "./aboutcompanystuff/Pillars";
+import FaqSection from "./aboutcompanystuff/FaqSection";
+import PillarSection from "./aboutcompanystuff/PillarSection";
+import GradientBg from "../components/animations/GradientBg";
 
 const MainContent = () => {
   return (
     <div className="main-content">
-      <Pillars />
-      {/* <DevJourney /> */}
+      <PillarSection />
+      <DevJourney />
+      <FaqSection />
+      {/* <GradientBg /> */}
     </div>
   );
 };
