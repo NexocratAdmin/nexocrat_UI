@@ -1,5 +1,5 @@
 const PILLAR_DATA = {
-  title: "Three pillars of modern fintech software development",
+  title: "Three pillars of modern software development",
   pillars: [
     {
       type: "Security",

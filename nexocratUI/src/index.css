@@ -84,3 +84,54 @@
   right: 0%;
   overflow: hidden;
 }
+
+#contact-us-section .block {
+  max-width: 1200px;
+  border: 1px solid #242424;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 48px;
+  display: flex;
+}
+
+#contact-us-section h1 {
+  max-width: 24ch;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative
+}
+
+.marquee {
+  display: flex;
+  animation: marquee 25s linear infinite
+}
+
+.marquee img {
+  width: 100px;
+  height: 100px;
+
+  flex-shrink: 0;
+  margin-right: 50px;
+  max-width: 200px
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0)
+  }
+
+  to {
+    transform: translate(-50%)
+  }
+}

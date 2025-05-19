@@ -3,8 +3,11 @@ import { Menu, X } from "lucide-react";
 import NavItem from "./NavItem";
 import ThemeToggleButton from "./ThemeToggleButton";
 import MainContent from "./MainContent";
-import heroImage from "../assets/heroImage.png";
+import HeroImage from "../assets/HeroImage.png";
+import heroImageLight from "../assets/HeroImageLight.png";
+import heroImageDark from "../assets/HeroImageDark.png";
 import NexocratLogo from "../assets/NexocratLogo.png";
+import Footer from "./Footer";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,17 +16,18 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white dark:bg-gray-900 shadow-md fixed w-full z-50 transition-colors text-black dark:text-white shadow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="bg-[#0f173e] dark:bg-gray-900 shadow-md fixed w-full z-50 transition-colors text-black dark:text-white shadow">
+        <div className="max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center flex-shrink-0 text-xl font-bold text-blue-600 dark:text-blue-400">
               <img
+                className="rounded-2xl"
                 src={NexocratLogo}
                 alt="nexocrat logo"
                 width={42}
                 height={42}
               />
-              <span>Nexocrat</span>
+              <span className="ml-4 text-2xl text-white">Nexocrat</span>
             </div>
 
             {/* Desktop Menu */}
@@ -32,12 +36,12 @@ const Navbar = () => {
               <NavItem to="/services">Services</NavItem>
               <NavItem to="/about">About Us</NavItem>
               <NavItem to="/contact">Contact</NavItem>
-              <ThemeToggleButton />
+              {/* <ThemeToggleButton /> */}
             </div>
 
             {/* Mobile Menu Button */}
             <div className="flex md:hidden items-center space-x-4">
-              <ThemeToggleButton />
+              {/* <ThemeToggleButton /> */}
               <button
                 onClick={toggleMenu}
                 className="text-gray-700 dark:text-gray-200"
@@ -66,10 +70,20 @@ const Navbar = () => {
           </div>
         )}
       </nav>
-      <div className="flex align-center justify-center">
-        <img src={heroImage} alt="brand-image" />
+      <div className="flex align-center justify-center dark:bg-gray-700">
+        <img
+          className="hidden dark:inline-block w-full h-full object-cover"
+          src={heroImageLight}
+          alt="brand-image"
+        />
+        <img
+          className="dark:hidden w-full h-full object-cover"
+          src={HeroImage}
+          alt="brand-image"
+        />
       </div>
       <MainContent />
+      <Footer />
     </>
   );
 };

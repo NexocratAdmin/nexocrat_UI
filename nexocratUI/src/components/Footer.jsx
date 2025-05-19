@@ -1,0 +1,97 @@
+import { Instagram, Linkedin } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-gray-900 text-gray-100 py-10">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="md:col-span-1">
+            <a href="/" className="text-2xl font-bold text-white">
+              Nexocrat
+            </a>
+            <p className="mt-2 text-sm">
+              Empowering businesses with innovative software solutions.
+            </p>
+            <div className="flex space-x-4 mt-4">
+              <a
+                href="https://www.instagram.com/devyuga_inc/"
+                aria-label="Instagram"
+              >
+                {/* <FaInstagram className="text-xl hover:text-pink-400" /> */}
+                <Instagram />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/devyuga/"
+                aria-label="LinkedIn"
+              >
+                {/* <FaLinkedin className="text-xl hover:text-blue-400" /> */}
+                <Linkedin />
+              </a>
+            </div>
+          </div>
+
+          {/* Useful Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-3">Useful Links</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="/" className="hover:underline">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="hover:underline">
+                  About us
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="hover:underline">
+                  Services
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-3">Our Services</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#" className="hover:underline">
+                  Web Development
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Mobile App Development
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Cloud Solutions
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-lg font-semibold mb-3">Contact Us</h4>
+            <p className="text-sm">
+              <strong>Email:</strong> business@nexocrat.com
+            </p>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-8 text-center text-sm text-gray-400">
+          © {new Date().getFullYear()} <strong>Nexocrat</strong>. All rights
+          reserved.
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
