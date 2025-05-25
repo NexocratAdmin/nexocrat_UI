@@ -1,8 +1,9 @@
 import { Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-100 py-10">
+    <footer className="bg-[#0f173e] text-gray-100 py-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -36,19 +37,25 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-3">Useful Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/" className="hover:underline">
+                <Link to="/" className="hover:underline">
                   Home
-                </a>
+                </Link>
               </li>
+
               <li>
-                <a href="#about" className="hover:underline">
-                  About us
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:underline">
+                <Link to="/services" className="hover:underline">
                   Services
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:underline">
+                  About us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:underline">
+                  Contact us
+                </Link>
               </li>
             </ul>
           </div>

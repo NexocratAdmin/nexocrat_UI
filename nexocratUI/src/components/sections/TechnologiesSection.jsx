@@ -12,6 +12,7 @@ import python from "../../assets/technologies/python.png";
 import react from "../../assets/technologies/react.svg";
 import typescript from "../../assets/technologies/typescript.svg";
 import unity from "../../assets/technologies/unity.svg";
+import laravel from "../../assets/technologies/laravel.svg";
 
 const ALL_Technologies = [
   { src: angular, alt: "angular icon" },
@@ -28,6 +29,7 @@ const ALL_Technologies = [
   { src: react, alt: "react icon" },
   { src: typescript, alt: "typescript icon" },
   { src: unity, alt: "unity icon" },
+  { src: laravel, alt: "laravel icon" },
   // repeat intentionally
   { src: angular, alt: "angular icon" },
   { src: aws, alt: "aws icon" },
@@ -48,8 +50,8 @@ const ALL_Technologies = [
 const TechnologiesSection = () => {
   return (
     <section
-      id="skillset"
-      className="relative overflow-hidden py-10 bg-gray-100"
+      id="technologies"
+      className="relative overflow-hidden py-6 md:py-10 bg-gray-100"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">

@@ -9,7 +9,7 @@ const ThemeToggleButton = () => {
       className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
       title="Toggle Dark Mode"
     >
-      {isDark ? <Sun size={20} /> : <Moon size={20} />}
+      {isDark ? <Sun size={20} /> : <Moon color="white" size={20} />}
     </button>
   );
 };

@@ -1,67 +1,5 @@
-const PILLAR_DATA = {
-  title: "Three pillars of modern software development",
-  pillars: [
-    {
-      type: "Security",
-      description:
-        "We take the question of security very seriously and build digital products that ensure high-level customer data protection. Our software is compliant with all the fintech regulations and standards.",
-      iconType: "lock-icon",
-      alt: "Security Icon",
-    },
-    {
-      type: "Reliability",
-      description:
-        "With more than seven years in the industry, we have learned how to develop stable and reliable software for various financial purposes, including banking, investment, and personal financial management.",
-      iconType: "checkmark-square-icon",
-      alt: "Reliability Icon",
-    },
-    {
-      type: "Speed & Scalability",
-      description:
-        "We understand that financial platforms must be fast and easily scalable. We pay particular attention to these features when building products for our clients from the finance and investment industry.",
-      iconType: "group-icon",
-      alt: "Speed Icon",
-    },
-  ],
-};
-
-const JOURNEY_DATA = {
-  title: "Our application development journey",
-  description:
-    "Nexocrat provides full-cycle application development from conceptualization to an MVP and full-fledged solution deployment.",
-  steps: [
-    {
-      title: "Discovery and planning",
-      description:
-        "We know that every project is unique. Therefore, our team investigates all the business requirements and builds effective end-users journeys to make the product intuitive at maximum.",
-    },
-    {
-      title: "UI/UX design",
-      description:
-        "At this fintech app development stage, we turn collected insights into an engaging and user-friendly interface that lets customers perform even the most difficult financial tasks.",
-    },
-    {
-      title: "Coding",
-      description:
-        "Our broad tech-stack spans solutions for both fintech web and mobile development, making it possible to digitize various financial and banking processes.",
-    },
-    {
-      title: "QA and testing",
-      description:
-        "We check every product’s aspect to ensure that software meets all the quality standards and the client's requirements.",
-    },
-    {
-      title: "Deployment",
-      description:
-        "After beta testing and final bug fixes, we deploy the software product to customers and introduce it to the world.",
-    },
-    {
-      title: "Maintenance",
-      description:
-        "This stage focuses on providing support to customers if they encounter challenges when using financial software.",
-    },
-  ],
-};
+import { useState } from "react";
+import Accordion from "../common/Accordion";
 
 const FAQ_DATA = {
   title: "Frequently Asked Questions",
@@ -142,4 +80,40 @@ const FAQ_DATA = {
   ],
 };
 
-export { PILLAR_DATA, JOURNEY_DATA, FAQ_DATA };
+const FaqSection = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+  return (
+    <section
+      id="faq-section"
+      className="bg-white text-gray-800 py-6 md:py-16 px-6 lg:px-24"
+    >
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
+        <div>
+          <h3 className="text-3xl font-bold mb-4 text-gray-900">
+            Frequently Asked <span className="text-blue-600">Questions</span>
+          </h3>
+          <p className="text-gray-600">{FAQ_DATA.description}</p>
+        </div>
+
+        <div className="lg:col-span-2 space-y-4">
+          {FAQ_DATA.faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-200 rounded-lg shadow-sm overflow-hidden"
+            >
+              <Accordion
+                index={index + 1}
+                title={faq.title}
+                content={faq.content}
+                openIndex={openIndex}
+                setOpenIndex={setOpenIndex}
+              ></Accordion>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FaqSection;
