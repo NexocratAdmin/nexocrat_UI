@@ -16,14 +16,18 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4 mt-4">
               <a
-                href="https://www.instagram.com/devyuga_inc/"
+                href="https://www.instagram.com/yourusername" // Replace with your Instagram URL
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
               >
                 {/* <FaInstagram className="text-xl hover:text-pink-400" /> */}
                 <Instagram />
               </a>
               <a
-                href="https://www.linkedin.com/company/devyuga/"
+                href="https://www.linkedin.com/in/yourusername" // Replace with your LinkedIn URL
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
                 {/* <FaLinkedin className="text-xl hover:text-blue-400" /> */}
