@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import NexocratLogo from "../assets/NexocratLogo.png";
-import NavItem from "./common/NavItem";
-import ThemeToggleButton from "./ThemeToggleButton";
 import { Link } from "react-router-dom";
+import NavItem from "./common/NavItem";
+// import ThemeToggleButton from "./ThemeToggleButton";
+import NexocratLogo from "../assets/NexocratLogo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-[#0f173e] dark:bg-gray-900 shadow-md fixed w-full z-50 transition-colors text-black dark:text-white shadow">
-      <div className="md:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-brand-dark dark:bg-gray-900 shadow-md fixed w-full z-50 transition-colors text-black dark:text-white shadow">
+      <div className="md:max-w-[80vw] mx-auto px-4 md:py-2 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <Link to="/">
             <div className="flex items-center flex-shrink-0 text-xl font-bold text-blue-600 dark:text-blue-400">
@@ -32,12 +32,12 @@ const Header = () => {
             <NavItem to="/services">Services</NavItem>
             <NavItem to="/about">About Us</NavItem>
             <NavItem to="/contact">Contact</NavItem>
-            <ThemeToggleButton />
+            {/* <ThemeToggleButton /> */}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center space-x-4">
-            <ThemeToggleButton />
+            {/* <ThemeToggleButton /> */}
             <button
               onClick={toggleMenu}
               className="text-gray-700 dark:text-gray-200"

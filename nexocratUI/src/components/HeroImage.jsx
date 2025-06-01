@@ -6,7 +6,7 @@ const HeroImage = ({
   imgclass = "",
 }) => {
   return (
-    <div className={`flex align-center w-full ${className}`}>
+    <div className={`flex items-center ${className}`}>
       {lightImageSrc && (
         <img
           className={`hidden dark:inline-block w-full ${imgclass}`}

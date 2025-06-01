@@ -5,15 +5,17 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 function App() {
   return (
     <div>
       <Header />
-      <main className="pt-16">
+      <main className="pt-20">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/" element={<Services />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

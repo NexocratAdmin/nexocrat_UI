@@ -6,20 +6,20 @@ const responsibilitiesData = {
   title: "Our Responsibilities",
   responsibilities: [
     {
-      src: NexocratToSocietyImg,
       title: "To Our Society",
+      imgSrc: NexocratToSocietyImg,
       content:
         "We ensure that everyone we interact with feels welcome, safe, and informed. We respect and value people—including our employees, customers, and partners.",
     },
     {
-      src: NexocratToPlanetImg,
       title: "To Our Planet",
+      imgSrc: NexocratToPlanetImg,
       content:
         "Sustainability is a part of everything we do. Close collaboration with our stakeholders helps us build a better tomorrow.",
     },
     {
-      src: NexocratToNeighboursImg,
       title: "To Our Neighbours",
+      imgSrc: NexocratToNeighboursImg,
       content:
         "When we say we put people first, we mean all people. In addition to our employees and customers, we consider the communities we serve in all that we do.",
     },
@@ -28,7 +28,7 @@ const responsibilitiesData = {
 
 const OurResponsibilities = () => {
   return (
-    <div className="bg-[#0f173e]">
+    <div className="bg-brand-dark">
       <div className="our-responsibilities max-w-7xl mx-auto py-4 md:py-10 text-white">
         <span className="text-3xl font-semibold pl-16 ml-8">
           {responsibilitiesData.title}
@@ -41,7 +41,7 @@ const OurResponsibilities = () => {
             >
               <img
                 className="w-[85%] md:w-full"
-                src={responsibility.src}
+                src={responsibility.imgSrc}
                 alt="image"
               />
               <div className="mt-4 mb-2">{responsibility.title}</div>

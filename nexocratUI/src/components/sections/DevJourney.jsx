@@ -40,7 +40,7 @@ const JOURNEY_DATA = {
 
 const DevJourney = () => {
   return (
-    <section className="bg-[#0f173e] text-white py-4 md:py-16 px-6 md:px-12 dark:bg-white dark:text-black">
+    <section className="bg-brand-dark text-white py-4 md:py-16 px-6 md:px-12 dark:bg-white dark:text-black">
       <div className="text-center mb-6 md:mb-12">
         <h1 className="text-4xl font-bold mb-4">{JOURNEY_DATA.title}</h1>
         <p className="text-lg max-w-2xl mx-auto">{JOURNEY_DATA.description}</p>
@@ -48,10 +48,7 @@ const DevJourney = () => {
 
       <div className="grid md:grid-cols-2 gap-3 md:gap-10 max-w-5xl mx-auto">
         {JOURNEY_DATA.steps.map((step, index) => (
-          <div
-            key={index}
-            className="flex gap-4 items-start opacity-80 hover:opacity-100"
-          >
+          <div key={index} className="flex gap-4 items-start">
             <img
               src={checkmarkIcon}
               alt="Check icon"

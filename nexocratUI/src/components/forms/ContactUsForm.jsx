@@ -97,7 +97,7 @@ const ContactUsForm = () => {
 
           <button
             type="submit"
-            className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition duration-200"
+            className="mt-4 bg-blue-700 hover:bg-brand-dark text-white font-medium py-3 px-6 rounded-md transition duration-200"
           >
             Submit
           </button>
