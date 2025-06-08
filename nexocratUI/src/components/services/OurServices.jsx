@@ -1,7 +1,15 @@
 import { useState } from "react";
 import WebDevLogo from "../../assets/Services/webdev-logo.jpg";
 import WebDevImg from "../../assets/Services/web-dev.png";
+import ECommerceImg from "../../assets/Services/ecommece.jpg";
+import FullStackImg from "../../assets/Services/fullsatckk.jpg";
+import CmsImg from "../../assets/Services/cms.jpg";
+import ApiImg from "../../assets/Services/api.jpg";
+import SecurityImg from "../../assets/Services/security.jpg";
+import MaintainceImg from "../../assets/Services/maintaince.jpg";
+import HealthCareImg from "../../assets/Services/healthcare.jpg";
 import AppDevImg from "../../assets/Services/app-dev.jpg";
+
 
 const ourServicesData = {
   heading: "Our Services",
@@ -64,7 +72,7 @@ const ourServicesData = {
       type: "fullstack",
       name: "Full-Stack Web Development",
       iconUrl: WebDevLogo,
-      imgUrl: WebDevImg,
+      imgUrl: FullStackImg,
       description:
         "Complete end-to-end solutions combining frontend + backend:",
       moreData: [
@@ -91,7 +99,7 @@ const ourServicesData = {
       type: "ecommerce",
       name: "E-Commerce Solutions",
       iconUrl: WebDevLogo,
-      imgUrl: WebDevImg,
+      imgUrl: ECommerceImg,
       description: "Designing and developing high-converting online stores:",
       moreData: [
         {
@@ -116,7 +124,7 @@ const ourServicesData = {
       type: "cms",
       name: "CMS Development & Customization",
       iconUrl: WebDevLogo,
-      imgUrl: WebDevImg,
+      imgUrl: CmsImg,
       description: "Easy-to-manage websites built on reliable CMS platforms:",
       moreData: [
         {
@@ -137,7 +145,7 @@ const ourServicesData = {
       type: "api",
       name: "API Development & Integration",
       iconUrl: WebDevLogo,
-      imgUrl: WebDevImg,
+      imgUrl: ApiImg,
       description:
         "Connecting your systems and unlocking third-party services:",
       moreData: [
@@ -163,7 +171,7 @@ const ourServicesData = {
       type: "performance",
       name: "Web Performance & Security",
       iconUrl: WebDevLogo,
-      imgUrl: WebDevImg,
+      imgUrl: SecurityImg,
       description: "Delivering fast, secure, and SEO-friendly websites:",
       moreData: [
         {
@@ -188,7 +196,7 @@ const ourServicesData = {
       type: "support",
       name: "Maintenance & Ongoing Support",
       iconUrl: WebDevLogo,
-      imgUrl: WebDevImg,
+      imgUrl: MaintainceImg,
       description:
         "Reliable post-launch support to keep your website running smoothly:",
       moreData: [
@@ -210,7 +218,7 @@ const ourServicesData = {
       type: "emerging",
       name: "Emerging & Specialized Services",
       iconUrl: WebDevLogo,
-      imgUrl: WebDevImg,
+      imgUrl: HealthCareImg,
       description: "Stay ahead of the curve with next-gen technologies:",
       moreData: [
         {
@@ -245,11 +253,10 @@ const OurServices = () => {
             <li key={idx} className="service-item rounded-lg">
               <button
                 onClick={() => setActiveTab(idx)}
-                className={`flex items-center w-full text-left p-6 text-sm font-medium transition-all duration-200 rounded-lg ${
-                  activeTab === idx
-                    ? "border-blue-600 bg-brand-dark text-white"
-                    : "border-transparent text-gray-600 hover:bg-gray-200"
-                }`}
+                className={`flex items-center w-full text-left p-6 text-sm font-medium transition-all duration-200 rounded-lg ${activeTab === idx
+                  ? "border-blue-600 bg-brand-dark text-white"
+                  : "border-transparent text-gray-600 hover:bg-gray-200"
+                  }`}
               >
                 <img
                   className="service-logo icon w-6 h-6 rounded-full"
@@ -275,17 +282,16 @@ const OurServices = () => {
             src={activeTabData.imgUrl}
             alt="service image"
           />
-          <div className="more-data absolute top-1/2 left-1/2 transform -translate-y-1/2 grid gap-4 md:gap-10 md:grid-cols-2 text-center">
+          <div className="more-data absolute top-1/2 right-5 transform -translate-y-1/2 p-4 rounded-xl flex flex-col gap-8 w-[calc(100%-40px)] max-w-[300px] text-right bg-transparent mr-24">
             {activeTabData.moreData.map((data, idx) => (
               <div
                 key={idx}
-                className={`p-3 md:p-3 rounded-xl shadow-lg hover:shadow-2xl ${
-                  activeTabData.isDarkTheme
+                className={`p-3 md:p-3 rounded-xl shadow-lg hover:shadow-2xl flex flex-col justify-between h-25 ${activeTabData.isDarkTheme
                     ? "bg-white text-black"
                     : "bg-brand-dark/90 text-white"
-                }`}
+                  }`}
               >
-                <h3 className="text-xl font-semibold mb-2">{data.title}</h3>
+                <h3 className="text-xl font-semibold">{data.title}</h3>
                 <p className="text-sm">{data.content}</p>
               </div>
             ))}
