@@ -21,11 +21,34 @@ const ContactUsForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add form submission logic here (e.g. API call or email handler)
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch("https://nexocrat.com:5000/nexocrat/contactUs", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    console.log("Form submitted:", result);
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      // Optionally clear form
+       setFormData({ name: "", email: "", message: "" });
+    } else {
+      alert("Failed to send message. Please try again.");
+    }
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("An error occurred. Please try again later.");
+  }
+};
+
 
   return (
     <section className="py-6 md:py-16 px-6 md:px-20">
