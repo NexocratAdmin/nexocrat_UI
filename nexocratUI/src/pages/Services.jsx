@@ -8,11 +8,7 @@ import HomeImg from "../assets/Images/cloudsol1.jpg";
 const Services = () => {
   return (
     <div className="services-content">
-      <HeroImage
-        className="w-screen"
-        imgclass="w-full md:max-h-[calc(100vh-80px)]"
-        imageSrc={HomeImg}
-      />
+      <HeroImage className="w-screen h-[50vh] md:h-[75vh]" imageSrc={HomeImg} />
       {/* <ServicesOverview /> */}
       {/* <BorderTop /> */}
       <OurServices />

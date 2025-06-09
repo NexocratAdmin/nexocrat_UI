@@ -121,7 +121,7 @@ const OurMethodology = () => {
         </div>
 
         {/* Tab Navigation */}
-        <ul className="flex overflow-auto md:gap-4 border-b border-gray-200 mb-3 md:mb-6">
+        <ul className="flex overflow-auto md:gap-4 mb-3 md:mb-6 border-b border-gray-200">
           {tabs.map((tab) => (
             <li key={tab.id}>
               <button

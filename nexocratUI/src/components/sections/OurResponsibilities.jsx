@@ -40,7 +40,7 @@ const OurResponsibilities = () => {
               className="responsibility-item flex flex-col items-center text-center m-2 md:m-8"
             >
               <img
-                className="w-[85%] md:w-full"
+                className="w-[75%] md:w-full"
                 src={responsibility.imgSrc}
                 alt="image"
               />

@@ -11,12 +11,18 @@ const About = () => {
     <div className="aboutus-content">
       <HeroImage
         imageSrc={AboutUsBanner}
-        className="w-screen md:h-[70vh] relative"
+        className="w-screen h-[75vh] relative"
       >
-        <div className="overlay-content absolute top-[45%] left-[8%] text-white text-2xl md:text-6xl leading-tight md:leading-none font-semibold">
-          <div className="text-xl font-medium">About Nexocrat</div>
-          <div className="mt-2">Tech That Thinks ahead.</div>
-          <div className="mt-6">Solutions Engineered For What's Next!</div>
+        <div className="overlay-content absolute m-4 bottom-4 md:bottom-[20%] md:left-[8%] text-white leading-tight md:leading-none">
+          <div className="text-lg md:text-xl font-medium hover:text-blue-600">
+            About Nexocrat
+          </div>
+          <div className="mt-2 md:mt-3 text-2xl md:text-4xl font-semibold hover:text-blue-600">
+            Tech That Thinks ahead.
+          </div>
+          <div className="mt-2 md:mt-4 text-2xl md:text-5xl font-semibold hover:text-blue-600">
+            Solutions Engineered For What's Next!
+          </div>
         </div>
       </HeroImage>
       <div className="additional-content relative">

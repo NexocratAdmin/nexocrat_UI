@@ -38,7 +38,7 @@ const WhoWeAre = () => {
       <div className="container mx-auto px-4 pt-4 md:pt-12">
         <div className="flex flex-col lg:flex-row items-start">
           {/* Left Column */}
-          <div className="md:w-1/2 w-full">
+          <div className="text-center md:w-1/2 w-full">
             <div className="text-gray-800 font-semibold ">
               <span className="text-sm text-indigo-600 uppercase ">
                 {whoWeAreData.title}

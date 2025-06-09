@@ -1,22 +1,9 @@
-const HeroImage = ({
-  imageSrc,
-  lightImageSrc,
-  children,
-  className = "",
-  imgclass = "",
-}) => {
+const HeroImage = ({ imageSrc, children, className = "", imgclass = "" }) => {
   return (
     <div className={`flex items-center ${className}`}>
-      {lightImageSrc && (
-        <img
-          className={`hidden dark:inline-block w-full ${imgclass}`}
-          src={lightImageSrc}
-          alt="light image"
-        />
-      )}
       {imageSrc && (
         <img
-          className={`dark:hidden w-full ${imgclass}`}
+          className={`dark:hidden w-full h-full ${imgclass}`}
           src={imageSrc}
           alt="image"
         />

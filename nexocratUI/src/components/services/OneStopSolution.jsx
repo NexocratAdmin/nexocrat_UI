@@ -1,5 +1,5 @@
 const data = {
-  heading: "Why Nexocrat is One-Stop Station for any of your Services?",
+  heading: "Why Nexocrat is One-Stop Solution for any of your Services?",
   description:
     "Developers at our web application design services firm provide web-based application development services to maximize ROI and boost profitability for your business by implementing strategic solutions and innovative approaches.",
   features: [
@@ -38,9 +38,9 @@ const data = {
 
 const OneStopSolution = () => {
   return (
-    <section className="py-16 bg-brand-dark text-white">
+    <section className="py-6 md:py-16 bg-brand-dark text-white">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-6 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
             {data.heading}
           </h2>
@@ -51,7 +51,7 @@ const OneStopSolution = () => {
           {data.features.map((feature, index) => (
             <div
               key={index}
-              className="rotatable-item bg-white text-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition"
+              className="flex flex-col align-center items-center rotatable-item bg-white text-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition"
             >
               <img
                 src={feature.img}

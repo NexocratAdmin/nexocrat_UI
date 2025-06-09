@@ -1,16 +1,19 @@
 import { useState } from "react";
+// const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+const apiMethod = "POST",
+  apiURL = "https://nexocrat.com:5000/nexocrat/contactUs";
 
-const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+const initialState = {
+  firstName: "",
+  lastName: "",
+  company: "",
+  email: "",
+  message: "",
+  attachments: [],
+};
 
 const ContactUsForm = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    company: "",
-    email: "",
-    message: "",
-    attachments: [],
-  });
+  const [formData, setFormData] = useState(initialState);
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -21,34 +24,34 @@ const ContactUsForm = () => {
     }
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await fetch("https://nexocrat.com:5000/nexocrat/contactUs", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const formBody = new URLSearchParams(formData).toString();
+      const response = await fetch(apiURL, {
+        method: apiMethod,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: formBody,
+      });
 
-    const result = await response.json();
-    console.log("Form submitted:", result);
+      const result = await response.json();
+      console.log("Form submitted:", result);
 
-    if (response.ok) {
-      alert("Message sent successfully!");
-      // Optionally clear form
-       setFormData({ name: "", email: "", message: "" });
-    } else {
-      alert("Failed to send message. Please try again.");
+      if (response.ok) {
+        alert("Message sent successfully!");
+        // Optionally clear form
+        setFormData(initialState);
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again later.");
     }
-  } catch (error) {
-    console.error("Error submitting form:", error);
-    alert("An error occurred. Please try again later.");
-  }
-};
-
+  };
 
   return (
     <section className="py-6 md:py-16 px-6 md:px-20">

@@ -54,7 +54,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 px-4 pt-2 pb-4 space-y-2 shadow">
+        <div className="md:hidden bg-white dark:bg-gray-900 space-y-2 text-center">
           <NavItem to="/" onClick={toggleMenu}>
             Home
           </NavItem>
