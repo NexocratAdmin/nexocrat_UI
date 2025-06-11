@@ -69,12 +69,17 @@ const FAQ_DATA = {
     },
     {
       title: "What industries do you specialize in?",
-      content: ` <p>We work in a wide range of industries, including:</p>
-        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
-          <li>MVP Development</li>
-          <li>Cloud DevOps</li>
-          <li>Data Science & Engineering</li>
-          <li>Mobile Apps</li>
+      content: ` <p>We work in a wide range of industries, including: </p>
+        <ul class="mt-2 space-y-1 text-gray-700">
+          <li>🚀 MVP Development for Startups & Innovators</li>
+          <li>☁️ Cloud & DevOps Engineering</li>
+          <li>📊 Data Science & Advanced Analytics</li>
+          <li> 📱 Next-Gen Mobile App Development</li>
+          <li>🌐 Web Platforms & SaaS Solutions</li>
+          <li>🤖 AI & Machine Learning Solutions</li>
+          <li>🛒 eCommerce & Retail Tech</li>
+          <li>🏥 Healthcare & MedTech</li>
+          <li>📦 Logistics & Supply Chain Tech</li>
         </ul>`,
     },
   ],
@@ -85,7 +90,7 @@ const FaqSection = () => {
   return (
     <section
       id="faq-section"
-      className="bg-white text-gray-800 py-6 md:py-16 px-6 lg:px-24"
+      className="mx-4 mt-6 md:mt-16 pb-6 bg-white text-gray-800"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
         <div>

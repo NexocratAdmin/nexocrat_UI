@@ -4,9 +4,9 @@ const whoWeAreData = {
     "We are a team of curious minds and sharp problem-solvers who believe IT should do more than support - It should lead.",
   slogan: "If it's tech, we don't just do it - We do it better.",
   details_about_us:
-    "Based in the heart of innovation, Mountain View, California, with development labs in India, we bridge the gap between vision and execution. Whether you're a startup or an established enterprise, we tailor our approach to fit your unique needs and aspirations. From conceptualization to deployment, we guide you through every step of the journey.",
+    "At Nexocrat, we transform bold ideas into impactful digital solutions. Headquartered at the intersection of innovation and technology-with global development teams including a strong presence in India — We specialize in bridging the gap between your business vision and real-world execution. Whether you're a disruptive startup or an established enterprise, Nexocrat delivers custom strategies aligned to your unique goals. Our service offerings include custom software development, CRM implementation, quality assurance, DevOps, and product branding, all designed to scale seamlessly with your growth. ",
   more_details_about_us:
-    "Whether it's crafting cutting-edge mobile and web applications, designing custom CRM & ERP solutions, leveraging the power of the cloud, or harnessing the insights of data analytics, we empower you to thrive in the digital age.",
+    "From concept to launch, we are your dedicated technology partner-committed to precision, agility, and innovation. Our team of expert developers, strategists, and designers work collaboratively to build reselient, calable solutions that empower your business in the digital age. <b>Let Nexocrat be the driving force behind your next big leap.</b>",
   what_we_do: `At <strong class="text-blue-600">Nexocrat</strong>, we are more than just an IT company — we are a team of passionate technologists, creative thinkers, and strategic problem-solvers. Driven by innovation and guided by purpose, we deliver next-generation digital solutions that help businesses thrive in a connected world.`,
   what_defines_us: [
     {
@@ -40,7 +40,7 @@ const WhoWeAre = () => {
           {/* Left Column */}
           <div className="text-center md:w-1/2 w-full">
             <div className="text-gray-800 font-semibold ">
-              <span className="text-sm text-indigo-600 uppercase ">
+              <span className="text-base text-indigo-600 uppercase ">
                 {whoWeAreData.title}
               </span>
               <h2 className="text-xl md:text-2xl mt-2">
@@ -56,7 +56,11 @@ const WhoWeAre = () => {
           <div className="md:w-1/2 w-full md:border-l border-gray-300 md:pl-10 md:ml-10">
             <div className="space-y-4 text-gray-600 text-base leading-relaxed">
               <p>{whoWeAreData.details_about_us}</p>
-              <p>{whoWeAreData.more_details_about_us}</p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: whoWeAreData.more_details_about_us,
+                }}
+              ></p>
             </div>
           </div>
         </div>

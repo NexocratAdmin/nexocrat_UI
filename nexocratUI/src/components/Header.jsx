@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import NavItem from "./common/NavItem";
+import AppLogo from "../assets/app-logo.png";
 // import ThemeToggleButton from "./ThemeToggleButton";
-import NexocratLogo from "../assets/NexocratLogo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ const Header = () => {
             <div className="flex items-center flex-shrink-0 text-xl font-bold text-blue-600 dark:text-blue-400">
               <img
                 className="rounded-2xl"
-                src={NexocratLogo}
+                src={AppLogo}
                 alt="nexocrat logo"
                 width={42}
                 height={42}

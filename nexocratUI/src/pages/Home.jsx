@@ -5,10 +5,9 @@ import DevJourney from "../components/sections/DevJourney";
 import TechnologiesSection from "../components/sections/TechnologiesSection";
 import FaqSection from "../components/sections/FaqSection";
 import ContactUsCTABanner from "../components/sections/ContactUsCTABanner";
-import BorderTop from "../components/common/BorderTop";
 import ContactUsModal from "../components/modal/contactUsModal";
 import HeroImage from "../components/HeroImage";
-import ITServicesImg from "../assets/Images/it-services.jpg";
+import BannerImg from "../assets/Images/home-banner.jpg";
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,7 +30,7 @@ const Home = () => {
     <div className="main-content">
       <HeroImage
         className="w-screen h-[70vh] md:h-[calc(100vh-80px)] screen relative"
-        imageSrc={ITServicesImg}
+        imageSrc={BannerImg}
       >
         <div className="overlay-content absolute bottom-4 m-4 md:top-[25%] md:left-[5%] text-white">
           <h2 className="md:max-w-[25%] text-xl md:text-4xl font-extrabold">
@@ -64,8 +63,10 @@ const Home = () => {
       <DevJourney />
       <TechnologiesSection />
       <FaqSection />
-      <BorderTop />
-      <ContactUsCTABanner />
+      <ContactUsCTABanner
+        additionalContentTitle="We've got the expertise. You've got the vision."
+        additionalContent="Reach out and let's explore how we can help you scale smarter and faster."
+      />
       {isModalOpen && <ContactUsModal ref={modalRef} />}
     </div>
   );

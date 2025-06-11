@@ -1,14 +1,22 @@
 import { useState } from "react";
-import WebDevLogo from "../../assets/Services/webdev-logo.jpg";
-import WebDevImg from "../../assets/Services/web-dev.png";
-import ECommerceImg from "../../assets/Services/ecommece.jpg";
-import FullStackImg from "../../assets/Services/fullsatckk.jpg";
+import FrontendIcon from "../../assets/Icons/Services/frontend.webp";
+import FrontendImg from "../../assets/Services/frontend.png";
+import BackendIcon from "../../assets/Icons/Services/backend.jpg";
+import BackendImg from "../../assets/Services/backend.jpg";
+import FullStackIcon from "../../assets/Icons/Services/fullstack.jpg";
+import FullStackImg from "../../assets/Services/fullstack.jpg";
+import ECommerceIcon from "../../assets/Icons/Services/e-commerce.png";
+import ECommerceImg from "../../assets/Services/e-commerce.jpg";
+import CmsIcon from "../../assets/Icons/Services/cms.webp";
 import CmsImg from "../../assets/Services/cms.jpg";
+import ApiIcon from "../../assets/Icons/Services/api.webp";
 import ApiImg from "../../assets/Services/api.jpg";
+import SecurityIcon from "../../assets/Icons/Services/web-perf-security.png";
 import SecurityImg from "../../assets/Services/security.jpg";
-import MaintainceImg from "../../assets/Services/maintaince.jpg";
-import HealthCareImg from "../../assets/Services/healthcare.jpg";
-import AppDevImg from "../../assets/Services/app-dev.jpg";
+import MaintenanceIcon from "../../assets/Icons/Services/maintenance.png";
+import MaintenanceImg from "../../assets/Services/maintenance.jpg";
+import EmergingServicesIcon from "../../assets/Icons/Services/emerging-services.avif";
+import EmergingServicesImg from "../../assets/Services/healthcare.jpg";
 
 const ourServicesData = {
   heading: "Our Services",
@@ -17,8 +25,8 @@ const ourServicesData = {
     {
       type: "frontend",
       name: "Frontend Development",
-      iconUrl: WebDevLogo,
-      imgUrl: WebDevImg,
+      iconUrl: FrontendIcon,
+      imgUrl: FrontendImg,
       description:
         "Crafting user-centric, responsive, and high-performing interfaces using the latest technologies:",
       moreData: [
@@ -43,8 +51,8 @@ const ourServicesData = {
     {
       type: "backend",
       name: "Backend Development",
-      iconUrl: WebDevLogo,
-      imgUrl: AppDevImg,
+      iconUrl: BackendIcon,
+      imgUrl: BackendImg,
       description: "Robust server-side systems to power your applications:",
       isDarkTheme: true,
       moreData: [
@@ -70,7 +78,7 @@ const ourServicesData = {
     {
       type: "fullstack",
       name: "Full-Stack Web Development",
-      iconUrl: WebDevLogo,
+      iconUrl: FullStackIcon,
       imgUrl: FullStackImg,
       description:
         "Complete end-to-end solutions combining frontend + backend:",
@@ -97,7 +105,7 @@ const ourServicesData = {
     {
       type: "ecommerce",
       name: "E-Commerce Solutions",
-      iconUrl: WebDevLogo,
+      iconUrl: ECommerceIcon,
       imgUrl: ECommerceImg,
       description: "Designing and developing high-converting online stores:",
       moreData: [
@@ -122,7 +130,7 @@ const ourServicesData = {
     {
       type: "cms",
       name: "CMS Development & Customization",
-      iconUrl: WebDevLogo,
+      iconUrl: CmsIcon,
       imgUrl: CmsImg,
       description: "Easy-to-manage websites built on reliable CMS platforms:",
       moreData: [
@@ -143,7 +151,7 @@ const ourServicesData = {
     {
       type: "api",
       name: "API Development & Integration",
-      iconUrl: WebDevLogo,
+      iconUrl: ApiIcon,
       imgUrl: ApiImg,
       description:
         "Connecting your systems and unlocking third-party services:",
@@ -169,7 +177,7 @@ const ourServicesData = {
     {
       type: "performance",
       name: "Web Performance & Security",
-      iconUrl: WebDevLogo,
+      iconUrl: SecurityIcon,
       imgUrl: SecurityImg,
       description: "Delivering fast, secure, and SEO-friendly websites:",
       moreData: [
@@ -194,8 +202,8 @@ const ourServicesData = {
     {
       type: "support",
       name: "Maintenance & Ongoing Support",
-      iconUrl: WebDevLogo,
-      imgUrl: MaintainceImg,
+      iconUrl: MaintenanceIcon,
+      imgUrl: MaintenanceImg,
       description:
         "Reliable post-launch support to keep your website running smoothly:",
       moreData: [
@@ -216,8 +224,8 @@ const ourServicesData = {
     {
       type: "emerging",
       name: "Emerging & Specialized Services",
-      iconUrl: WebDevLogo,
-      imgUrl: HealthCareImg,
+      iconUrl: EmergingServicesIcon,
+      imgUrl: EmergingServicesImg,
       description: "Stay ahead of the curve with next-gen technologies:",
       isDarkTheme: true,
       moreData: [
@@ -271,7 +279,7 @@ const OurServices = () => {
       >
         {/* Tabs on Left */}
         <div className="w-1/3 md:w-1/5 md:ml-40 mt-2">
-          <div className="md:my-4 md:ml-6">
+          <div className="md:my-4 ml-2 md:ml-6">
             <span className="text-sm md:text-2xl font-bold text-gray-700">
               🚀 What We Offer :
             </span>
@@ -280,7 +288,7 @@ const OurServices = () => {
             {ourServicesData.services.map((service, idx) => (
               <li
                 key={idx}
-                className={`md:flex items-center cursor-pointer text-left p-2 md:p-6 border-t border-gray-300 ${
+                className={`flex items-center cursor-pointer text-left p-2 md:p-6 border-t border-gray-300 ${
                   activeTab === idx
                     ? "md:border-blue-600 md:bg-brand-dark text-blue-600 md:text-white"
                     : "md:border-transparent text-gray-600 hover:bg-gray-200"
@@ -288,11 +296,11 @@ const OurServices = () => {
                 onClick={() => setActiveTab(idx)}
               >
                 <img
-                  className="hidden md:inline-block service-logo icon w-6 h-6 rounded-full"
+                  className="inline-block service-logo icon w-6 h-6 md:w-10 md:h-10 rounded-full"
                   src={service.iconUrl}
                   alt="service icon"
                 />
-                <span className="md:ml-2 md:text-lg">{service.name}</span>
+                <span className="ml-2 md:ml-4 md:text-lg">{service.name}</span>
               </li>
             ))}
           </ul>
@@ -300,24 +308,22 @@ const OurServices = () => {
 
         {/* Content on Right */}
         <div className="w-2/3 md:w-4/5 bg-gray-100 px-2 py-4 md:p-10">
-          <div className="md:mt-6 md:mr-10 pl-2 md:pl-10">
+          <div className="md:mr-10 pl-2 md:pl-10">
             <h2 className="text-xl md:text-3xl text-center md:text-left font-bold text-blue-600">
               {activeTabData.name}
             </h2>
-            <p className="text-gray-600 mt-2 md:mt-4">
-              {activeTabData.description}
-            </p>
-            <div className="about-service relative mt-2 md:mt-4">
+            <p className="text-gray-600 mt-2">{activeTabData.description}</p>
+            <div className="about-service relative mt-10">
               <img
                 className="service-image md:w-[58vw] md:h-[75vh] border"
                 src={activeTabData.imgUrl}
                 alt="service image"
               />
-              <div className="more-data flex flex-col gap-2 md:gap-6 mt-2 md:absolute top-1/2 right-0 md:transform md:-translate-y-1/2 rounded-xl text-center">
+              <div className="more-data flex flex-col gap-2 md:gap-6 mt-8 md:mt-2 md:absolute top-1/2 right-0 md:transform md:-translate-y-1/2 rounded-xl text-center">
                 {activeTabData.moreData.map((data, idx) => (
                   <div
                     key={idx}
-                    className={`flex flex-col justify-center md:w-[300px] md:h-[100px] p-2 md:p-3 rounded-xl border ${
+                    className={`flex flex-col justify-center md:w-[300px] md:h-[100px] p-3 rounded-xl border ${
                       activeTabData.isDarkTheme
                         ? "bg-white text-black"
                         : "bg-brand-dark/90 text-white"

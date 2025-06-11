@@ -1,10 +1,10 @@
-import HeroImage from "../components/HeroImage";
-import AboutUsBanner from "../assets/Images/about_us_hero.webp";
 import WhoWeAre from "../components/sections/WhoWeAre";
 import OurMethodology from "../components/sections/OurMethodology";
 import ContactUsCTABanner from "../components/sections/ContactUsCTABanner";
-import BorderTop from "../components/common/BorderTop";
 import OurResponsibilities from "../components/sections/OurResponsibilities";
+import BorderTop from "../components/common/BorderTop";
+import HeroImage from "../components/HeroImage";
+import AboutUsBanner from "../assets/Images/aboutus-banner.webp";
 
 const About = () => {
   return (
@@ -27,11 +27,13 @@ const About = () => {
       </HeroImage>
       <div className="additional-content relative">
         <WhoWeAre />
-        <BorderTop />
         <OurResponsibilities />
         <OurMethodology />
         <BorderTop />
-        <ContactUsCTABanner />
+        <ContactUsCTABanner
+          additionalContentTitle="Start something exceptional today !"
+          additionalContent="Let's chat about your business goals and how Nexocrat can build the technology to help you reach them. From concept to deployment - we've got you covered."
+        />
       </div>
     </div>
   );

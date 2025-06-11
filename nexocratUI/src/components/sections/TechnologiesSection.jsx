@@ -53,16 +53,22 @@ const TechnologiesSection = () => {
       id="technologies"
       className="relative overflow-hidden py-6 md:py-10 bg-gray-100"
     >
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+      <div className="container mx-auto">
+        <div className="text-center">
           <h2 className="text-3xl font-semibold text-gray-800">
             Our Tech Capabilities
           </h2>
         </div>
-        <div className="overflow-hidden whitespace-nowrap marquee-container">
-          <div className="marquee inline-block">
+        <div className="marquee-container flex relative overflow-hidden whitespace-nowrap mt-8 md:mt-12 mb-2">
+          <div className="marquee flex inline-block">
             {ALL_Technologies.map((tech, index) => (
-              <img key={index} src={tech.src} alt={tech.alt} />
+              <img
+                key={index}
+                // className="w-[100px] h-[100px] flex-shrink-0 mr-16 max-w-[200px]"
+                className="w-16 h-16 md:w-24 md:h-24 flex-shrink-0 mr-16"
+                src={tech.src}
+                alt={tech.alt}
+              />
             ))}
           </div>
         </div>

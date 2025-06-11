@@ -28,27 +28,25 @@ const ContactUsForm = () => {
     e.preventDefault();
 
     try {
-      const formBody = new URLSearchParams(formData).toString();
+      const formDataToSend = new FormData();
+      for (const key in formData) {
+        formDataToSend.append(key, formData[key]);
+      }
       const response = await fetch(apiURL, {
         method: apiMethod,
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: formBody,
+        body: formDataToSend,
       });
 
       const result = await response.json();
-      console.log("Form submitted:", result);
-
+      console.log("Form submitted: ", result);
       if (response.ok) {
         alert("Message sent successfully!");
-        // Optionally clear form
         setFormData(initialState);
       } else {
         alert("Failed to send message. Please try again.");
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Submission Error: ", error);
       alert("An error occurred. Please try again later.");
     }
   };

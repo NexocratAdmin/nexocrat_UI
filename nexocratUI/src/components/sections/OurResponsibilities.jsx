@@ -1,6 +1,6 @@
-import NexocratToSocietyImg from "../../assets/Images/Nexocrat-to-our-society.jpg";
-import NexocratToPlanetImg from "../../assets/Images/Nexocrat-to-our-planet.jpg";
-import NexocratToNeighboursImg from "../../assets/Images/Nexocrat-to-our-neighbors.jpg";
+import NexocratToSocietyImg from "../../assets/Images/Responsibilities/to-our-society.jpg";
+import NexocratToPlanetImg from "../../assets/Images/Responsibilities/to-our-planet.jpg";
+import NexocratToNeighboursImg from "../../assets/Images/Responsibilities/to-our-neighbors.jpg";
 
 const responsibilitiesData = {
   title: "Our Responsibilities",

@@ -3,21 +3,42 @@ import { Link } from "react-router-dom";
 const ContactUsCTABanner = ({
   text = "We will tailor our process and solution to your needs.",
   btnText = "Let's talk",
+  additionalContentTitle = "",
+  additionalContent = "",
 }) => {
   return (
-    <section id="contact-us-section" className="py-4 md:py-12 px-4 text-center">
-      <div className="flex items-center justify-center max-w-5xl mx-auto rounded-lg border border-border-dark bg-gray-100 p-4 md:p-12 gap-2 md:gap-10">
-        <div className="text-lg md:text-2xl leading-tight md:text-[40px] font-medium text-gray-800 max-w-[75%] gap-10">
-          {text}
+    <>
+      {(additionalContentTitle || additionalContent) && (
+        <div className="max-w-7xl mx-4 md:mx-auto my-4 md:my-12">
+          {additionalContentTitle && (
+            <div className="text-2xl md:text-3xl font-medium">
+              {additionalContentTitle}
+            </div>
+          )}
+          {additionalContent && (
+            <div className="mt-2 text-xl md:text-2xl text-gray-700">
+              {additionalContent}
+            </div>
+          )}
         </div>
-        <Link
-          to="/contact"
-          className="inline-block bg-blue-700 hover:bg-brand-dark text-white font-semibold py-2 md:py-3 px-3 md:px-6 rounded-lg"
-        >
-          {btnText}
-        </Link>
-      </div>
-    </section>
+      )}
+      <section
+        id="contact-us-section"
+        className="max-w-5xl mx-4 md:mx-auto my-4 md:my-12 text-center"
+      >
+        <div className="flex items-center justify-evenly px-2 py-2 md:py-8 bg-gray-100 rounded-lg border border-gray-200 shadow-sm">
+          <div className="text-lg md:text-2xl text-gray-800 font-medium">
+            {text}
+          </div>
+          <Link
+            to="/contact"
+            className="py-2 md:py-3 px-3 md:px-6 bg-blue-700 text-white font-semibold rounded-lg"
+          >
+            {btnText}
+          </Link>
+        </div>
+      </section>
+    </>
   );
 };
 
