@@ -29,9 +29,15 @@ const ContactUsForm = () => {
 
     try {
       const formDataToSend = new FormData();
-      for (const key in formData) {
+     for (const key in formData) {
+      if (key !== "attachments") {
         formDataToSend.append(key, formData[key]);
       }
+    }
+
+     formData.attachments.forEach((file, index) => {
+      formDataToSend.append("attachments", file); 
+    });
       const response = await fetch(apiURL, {
         method: apiMethod,
         body: formDataToSend,
@@ -40,10 +46,10 @@ const ContactUsForm = () => {
       const result = await response.json();
       console.log("Form submitted: ", result);
       if (response.ok) {
-        alert("Message sent successfully!");
+        alert(result.message);
         setFormData(initialState);
       } else {
-        alert("Failed to send message. Please try again.");
+        alert(result.message);
       }
     } catch (error) {
       console.error("Submission Error: ", error);
