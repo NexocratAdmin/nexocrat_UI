@@ -8,43 +8,43 @@ import MaintenanceIcon from "../../assets/Icons/DevJourney/maintenance.png";
 const JOURNEY_DATA = {
   title: "Our Application Development Journey",
   description:
-    "Nexocrat provides full-cycle application development from conceptualization to an MVP and full-fledged solution deployment.",
+    "Nexocrat delivers full-cycle application development — from ideation and MVP to enterprise-grade deployment.",
   steps: [
     {
-      title: "Discovery and planning",
+      title: "Discovery & Planning",
       icon: DiscoveryIcon,
       description:
-        "We know that every project is unique. Therefore, our team investigates all the business requirements and builds effective end-users journeys to make the product intuitive at maximum.",
+        "We begin by deeply understanding your business needs, goals, and user expectations. Through structured workshops and requirement analysis, we map out the optimal solution strategy tailored to your vision.",
     },
     {
-      title: "UI/UX design",
+      title: "UI/UX Design",
       icon: UIUXIcon,
       description:
-        "At this fintech app development stage, we turn collected insights into an engaging and user-friendly interface that lets customers perform even the most difficult financial tasks.",
+        "Our design team transforms your concept into intuitive and engaging interfaces. We prioritize user experience, ensuring ease of use, aesthetic appeal, and seamless interactions — especially for complex workflows.",
     },
     {
-      title: "Coding",
+      title: "Coding & Development",
       icon: CodingIcon,
       description:
-        "Our broad tech-stack spans solutions for both fintech web and mobile development, making it possible to digitize various financial and banking processes.",
+        "Our engineers build robust applications using modern, scalable technologies. Whether it's fintech, healthtech, or enterprise apps, we ensure secure, accessible, high-performance code aligned with industry best practices.",
     },
     {
-      title: "QA and testing",
+      title: "QA and Testing",
       icon: QAIcon,
       description:
-        "We check every product’s aspect to ensure that software meets all the quality standards and the client's requirements.",
+        "Quality is non-negotiable. We perform rigorous manual and automated testing at every stage to eliminate bugs and ensure compliance with performance, usability, and security standards.",
     },
     {
       title: "Deployment",
       icon: DeployIcon,
       description:
-        "After beta testing and final bug fixes, we deploy the software product to customers and introduce it to the world.",
+        "Post final validation, we handle seamless deployment to your preferred cloud or on-premise environment. We also support version control, rollback strategies, and staging environments for risk-free launches.",
     },
     {
-      title: "Maintenance",
+      title: "Maintenance & Support",
       icon: MaintenanceIcon,
       description:
-        "This stage focuses on providing support to customers if they encounter challenges when using financial software.",
+        "Our commitment doesn't end at deployment. We offer ongoing maintenance, feature enhancements, security updates, and technical support to keep your solution performing at its best.",
     },
   ],
 };

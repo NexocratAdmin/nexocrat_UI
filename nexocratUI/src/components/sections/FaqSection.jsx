@@ -74,10 +74,10 @@ const FAQ_DATA = {
           <li>🚀 MVP Development for Startups & Innovators</li>
           <li>☁️ Cloud & DevOps Engineering</li>
           <li>📊 Data Science & Advanced Analytics</li>
-          <li> 📱 Next-Gen Mobile App Development</li>
+          <li>&nbsp;📱 Next-Gen Mobile App Development</li>
           <li>🌐 Web Platforms & SaaS Solutions</li>
           <li>🤖 AI & Machine Learning Solutions</li>
-          <li>🛒 eCommerce & Retail Tech</li>
+          <li>🛒 E-Commerce & Retail Tech</li>
           <li>🏥 Healthcare & MedTech</li>
           <li>📦 Logistics & Supply Chain Tech</li>
         </ul>`,

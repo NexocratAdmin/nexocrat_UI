@@ -37,11 +37,11 @@ const Home = () => {
             Transforming Ideas into Scalable Digital Solutions
           </h2>
           <p className="md:max-w-[40%] mt-4 md:mt-10 text-lg font-semibold">
-            At <span className="text-blue-600">Nexocrat</span>, we combine
-            technical expertise with creative vision to build modern, reliable,
-            and scalable web applications. From frontend elegance to backend
-            performance, we offer full-spectrum solutions tailored to your
-            business needs.
+            At <span className="text-xl text-blue-600">Nexocrat</span>, we
+            combine technical expertise with creative vision to build modern,
+            reliable, and scalable web applications. From frontend elegance to
+            backend performance, we offer full-spectrum solutions tailored to
+            your business needs.
           </p>
           <div className="cta-block flex mt-6 text-xl">
             <button
